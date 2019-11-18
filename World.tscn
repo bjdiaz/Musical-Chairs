@@ -1,0 +1,238 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Chair.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30, 30 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30, 30 )
+
+[node name="World" type="Node2D"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 270, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="NPC Nodes" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="NPC" type="KinematicBody2D" parent="NPC Nodes"]
+editor/display_folded = true
+position = Vector2( 390, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="NPC Nodes/NPC"]
+modulate = Color( 0.0404389, 0.441406, 0.0172424, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Nodes/NPC"]
+shape = SubResource( 1 )
+
+[node name="NPC2" type="KinematicBody2D" parent="NPC Nodes"]
+editor/display_folded = true
+position = Vector2( 510, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="NPC Nodes/NPC2"]
+modulate = Color( 0.0404389, 0.441406, 0.0172424, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Nodes/NPC2"]
+shape = SubResource( 1 )
+
+[node name="NPC3" type="KinematicBody2D" parent="NPC Nodes"]
+editor/display_folded = true
+position = Vector2( 630, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="NPC Nodes/NPC3"]
+modulate = Color( 0.0404389, 0.441406, 0.0172424, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Nodes/NPC3"]
+shape = SubResource( 1 )
+
+[node name="NPC4" type="KinematicBody2D" parent="NPC Nodes"]
+editor/display_folded = true
+position = Vector2( 750, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="NPC Nodes/NPC4"]
+modulate = Color( 0.0404389, 0.441406, 0.0172424, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Nodes/NPC4"]
+shape = SubResource( 1 )
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="Repeat" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 870, 200 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Repeat"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Repeat"]
+shape = SubResource( 2 )
+
+[node name="Stopper" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 810, 270 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Stopper"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Stopper"]
+shape = SubResource( 2 )
+
+[node name="Stopper2" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 690, 270 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Stopper2"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Stopper2"]
+shape = SubResource( 2 )
+
+[node name="Stopper3" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 570, 270 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Stopper3"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Stopper3"]
+shape = SubResource( 2 )
+
+[node name="Stopper4" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 450, 270 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Stopper4"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Stopper4"]
+shape = SubResource( 2 )
+
+[node name="Rid" type="StaticBody2D" parent="Floors"]
+position = Vector2( 330, 270 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Rid"]
+modulate = Color( 0.94902, 0.0431373, 0.0431373, 1 )
+self_modulate = Color( 1, 0, 0.0705882, 1 )
+light_mask = 99492
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Rid"]
+shape = SubResource( 2 )
+
+[node name="Chair4" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 390, 270 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Chair4"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Chair4"]
+shape = SubResource( 2 )
+
+[node name="Chair3" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 510, 270 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Chair3"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Chair3"]
+shape = SubResource( 2 )
+
+[node name="Chair2" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 630, 270 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Chair2"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Chair2"]
+shape = SubResource( 2 )
+
+[node name="Chair" type="StaticBody2D" parent="Floors"]
+editor/display_folded = true
+position = Vector2( 750, 270 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Floors/Chair"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floors/Chair"]
+shape = SubResource( 2 )
